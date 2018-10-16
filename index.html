@@ -128,7 +128,7 @@ form{
        <!-- LOGIN FORM -->
         <div class="card flipInY animated" id="login_form" style="display: none;">
         <div class="card-body">
-          <form method="post" action="" enctype="multipart/form-data">
+          <form method="post" action="common/login.php">
               
                 <div class="form-group ">
                     <label for="username"><b>Username</b></label>
@@ -140,14 +140,14 @@ form{
                 </div>
                 <br>
                 <div class="form-group form-check">
-                    <input type="checkbox" class="form-check-input">
-                    <label class="form-check-label" for="check" name="remember"><b>Remember Me<b></label>
+                    <input type="checkbox" class="form-check-input"  name="remember">
+                    <label class="form-check-label" for="check"><b>Remember Me<b></label>
                          <a href="" style="float: right;">Forgot Password ?</a>
                  </div>
 
                <br> 
               
-              <button type="submit" class="btn btn-primary btn-sm btn-block" name="sign_up">Sign Up</button>
+              <button type="submit" class="btn btn-primary btn-sm btn-block" name="login">Login</button>
             </form>
         </div>
        </div>

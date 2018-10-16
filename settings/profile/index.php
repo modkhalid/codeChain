@@ -13,6 +13,9 @@
 		.onthis{
 			border-left: 3px solid brown;
 		}
+		.form-control{
+			color: gray;
+		}
 	</style>
 	
 </head>
