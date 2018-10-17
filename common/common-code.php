@@ -67,6 +67,26 @@ function nav(){
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav container justify-content-end">
+      <li class="nav-item">
+       <div class="row w3-margin-right">
+      
+          <div class="input-group "  style="margin-left: 75px;width: 400px;" >
+            
+            <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" onkeyup="searchpeople(this)">
+
+          </div>
+          
+           
+
+      </div>
+      <div class="row" style="position: absolute;z-index: 999;">
+        <div style="max-height: 200px;width: 400px;background-color: white;margin-left: 75px;border: 1px solid gray;overflow: auto;padding-left: 5px;" id="hint">
+          
+        </div>
+        
+      </div>
+               
+      </li>
       <li class="nav-item dropdown active">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="../img/logo.png" width="27" height="27" style="border-radius: 50%;"> Mohammad Anas</a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -147,3 +167,4 @@ function navInner(){
 }
 
 ?>
+
