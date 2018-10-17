@@ -44,14 +44,10 @@ function lefthome()
 }
 function righthome(){ ?>
 
-<!-- TO POST ANY NEWS OR SOMTHING -->
-<form style="width: 85% ; margin-top: 40px;" class="container">
- <div class="form-group " >
-    <label for="post"><b>Write and Say to Everyone</b></label>
-    <textarea class="form-control" rows="3" name="post"></textarea>
-  </div>
-  <button type="button" class="btn btn-primary" name='submit'>Post</button>
-</form>
+
+
+
+
 
 
 
