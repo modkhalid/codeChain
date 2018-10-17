@@ -1,8 +1,7 @@
 <?php 
 include "connection.php" ;
-echo "Page";
+// QUERY TO SIGNUP 
 if(isset($_POST['signup'])){
- echo "Hello";
   $modl29_firstname = $_POST['firstname'];
   $modl29_lastname = $_POST['lastname'] ;
   $modl29_username = $_POST['username'] ;
@@ -17,10 +16,11 @@ if(isset($_POST['signup'])){
   $query = "INSERT INTO usermodl29 (firstname, lastname, email, password, username) VALUES ('{$modl29_firstname}', '{$modl29_lastname}', '{$modl29_email}', '{$crypted_password}', '{$modl29_username}')" ;
   $result = mysqli_query($conn , $query) ;
   if(!$result){
-  	die("QUERY FAILED") ;
+    die("QUERY FAILED") ;
   }
   else{
-  	header("Location: ../home/") ;
+    header("Location: ../home/") ;
   }
-}
+}  // POST END
+// SCRIPT TO VALIDATE UNIQUE EMAIL
 ?>
