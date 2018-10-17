@@ -7,6 +7,7 @@
   <style type="text/css">
   .mod-margin{
     margin-top: 50px;
+
   }
   
   .mod-margin2{
@@ -72,7 +73,7 @@ session_write_close();
 <!-- nav ends here -->
 
 <div class=" w3-margin-top">
-  <div class="row content">
+  <div class="row content" id="mainbody">
     <!-- bio and online people div start -->
     <div class="col-md-3" style="height: 600px;overflow: auto;">
       <?php lefthome();  ?>
@@ -93,9 +94,14 @@ session_write_close();
 
 </body>
 
+
+
+
+
+
+
 <script type="text/javascript">
-
-
+counter=0;
 function searchpeople(input) {
   str=input.value;
     if(str.length>1){
@@ -109,11 +115,46 @@ function searchpeople(input) {
     }
 }
 
+
 function requestForConnect(str,obj){
   console.log(str);
   $.get("../async/connect-request.php?agent="+str,function(data,status){
     obj.innerHTML=data;
   });
 }
+
+
+function requestCancel(str,obj){
+  if(confirm("Are you sure?")){
+    $.get("../async/cancel-request.php?agent="+str,function(data,status){
+    obj.innerHTML=data;
+  });
+  }
+  // alert("modkhalid");
+}
+
+var not=document.getElementById('showNotification');
+not.onclick = ()=>{
+
+  block=document.getElementById('notification');
+  if(counter%2==0){
+    block.style.display="block";
+    block.style.transition="3s";
+    counter=1;
+  }else{
+    block.style.display="none";
+    counter=0;
+  }
+  
+
+}
+
+var bod=document.getElementById('mainbody');
+bod.onclick=()=>{
+  document.getElementById('notification').style.display="none";
+  counter=0;
+  document.getElementById('hint').innerHTML="";
+}
+
 </script>
 </html>

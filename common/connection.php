@@ -12,11 +12,11 @@ $conn = mysqli_connect($servername, $username, $password, $dbname);
 
 
 function getId($session){
-	$sender=$session;
-	$sender=hex2bin($sender);
-	$sender=base64_decode($sender);
-	$sender=(($sender/5)-300)/5;
-	return sender;
+	$sender_id=$session;
+	$sender_id=hex2bin($sender_id);
+	$sender_id=base64_decode($sender_id);
+	$sender_id=(($sender_id/5)-300)/5;
+	return $sender_id;
 }
 
 

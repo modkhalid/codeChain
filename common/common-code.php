@@ -70,7 +70,7 @@ function nav(){
       <li class="nav-item">
        <div class="row w3-margin-right">
       
-          <div class="input-group "  style="margin-left: 75px;width: 400px;" >
+          <div class="input-group "  style="width: 400px;" >
             
             <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" onkeyup="searchpeople(this)">
 
@@ -80,7 +80,7 @@ function nav(){
 
       </div>
       <div class="row" style="position: absolute;z-index: 999;">
-        <div style="max-height: 200px;width: 400px;background-color: white;margin-left: 75px;border: 1px solid gray;overflow: auto;padding-left: 5px;" id="hint">
+        <div style="max-height: 200px;width: 400px;background-color: white;border: 1px solid gray;overflow: auto;padding-left: 5px;" id="hint">
           
         </div>
         
@@ -99,7 +99,26 @@ function nav(){
       </li>
 
        <li class="nav-item">
-        <a class="nav-link" href="#"><i class="fas fa-globe"></i> About</a>
+        <a class="nav-link" id="showNotification"><i class="fas fa-globe"></i></a>
+          <div class="container-fluid" style="position: absolute;z-index: 999;width: 400px;right: 0px;
+          height: 400px;background-color: white;overflow: auto; margin-top: 10px; display: none;" id="notification">     
+          <!-- <div class="row"> -->
+            <div class="row" style="text-align: center;margin-top: 5px;">
+
+              <div class="w3-card-2 btn-group mx-auto d-block">
+                  <button type="button" class="btn btn-white">Apple</button>
+                  <button type="button" class="btn btn-white">Apple</button>
+                  <button type="button" class="btn btn-white">Apple</button>
+                  <button type="button" class="btn btn-white">Apple</button>
+                  <button type="button" class="btn btn-white">Apple</button>
+              </div>
+            </div>   
+
+            <div class="row" id="freindrequest">
+              
+            </div>     
+          
+          </div>
       </li>
 
        <li class="nav-item dropdown ">
