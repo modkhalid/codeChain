@@ -42,9 +42,26 @@
    .likes i {
     margin-right: 6px;
    }
+   /*.search-bar:hover{
+    width: 50%;
+   }*/
   </style>
 
 </head>
+
+<?php
+// will check whether user login or not
+
+// this code will check whether user login or not 
+session_start();
+if(!isset($_SESSION['MKohaanlaisd'])){
+  echo "login please";
+  return;
+}
+session_write_close();
+
+
+?>
 <?php include 'code/inc.home.php'; ?>
 <body>
 <!-- nav here -->
@@ -75,4 +92,28 @@
 
 
 </body>
+
+<script type="text/javascript">
+
+
+function searchpeople(input) {
+  str=input.value;
+    if(str.length>1){
+    $.get("../async/searchpeople.php?query="+str,function(data,status){
+      document.getElementById('hint').innerHTML=data;
+      // alert(status);
+      
+    });
+    }else{
+      document.getElementById('hint').innerHTML="";
+    }
+}
+
+function requestForConnect(str,obj){
+  console.log(str);
+  $.get("../async/connect-request.php?agent="+str,function(data,status){
+    obj.innerHTML=data;
+  });
+}
+</script>
 </html>
